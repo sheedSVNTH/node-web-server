@@ -37,7 +37,7 @@ hbs.registerHelper('screamIt', (text) => {
 });
 
 //request & response
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
 	res.render('home.hbs', {
 		pageTitle: 'Home Page',
 		welcomeMessage: 'welcome to tigre land dog'
@@ -47,6 +47,13 @@ app.get('/home', (req, res) => {
 app.get('/about', (req, res) => {
 	res.render('about.hbs', {
 		pageTitle: 'About Page'
+	});
+});
+
+app.get('/portfolio', (req, res) => {
+	res.render('portfolio.hbs', {
+		pageTitle: 'RKM Portfolio',
+		welcomeMessage: 'Please enjoy my comprehensive collection of life works. Thank-you!'
 	});
 });
 
